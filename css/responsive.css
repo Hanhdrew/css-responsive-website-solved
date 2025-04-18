@@ -5,13 +5,136 @@
 */
 
 @media (min-width: 1024px) {
-  /* .top-navigation .trigram {
-    display: none;
-  } */
-
   /* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
+
+  .top-navigation a:hover {
+    color: #434343;
+  }
+
+  .teammate-social-icons > div:hover {
+    background-color: #434343;
+  }
+
+  .social-icons .icon:hover {
+    background-color: #fff;
+  }
+  .social-icons .icon + span:hover {
+    color: #fff;
+  }
+
+  .footer-contacts > div:hover,
+  .footer-contacts a:hover {
+    color: #fff;
+  }
+
+  .top-navigation .trigram {
+    display: none;
+  }
 }
 
 /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
 
+@media (max-width: 1023px) {
+  header {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+  }
+  .top-navigation ul {
+    display: none;
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .teammates-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+  }
+
+  .teammate {
+    text-align: center;
+    width: 250px;
+  }
+
+  .teammate-img-wrapper {
+    align-self: center;
+    width: 80%;
+  }
+
+  .teammate-social-icons {
+    margin: 0 auto;
+  }
+
+  .teammates-list::before,
+  .teammates-list::after {
+    display: none;
+  }
+
+  footer .social-icons .icon {
+    background-color: #fff;
+  }
+
+  .footer-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+  }
+}
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
+
+@media (max-width: 767px) {
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .portfolio-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .teammates-list-wrapper {
+    flex-direction: column;
+  }
+
+  .teammate {
+    padding: 20px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .teammate-img-wrapper {
+    width: 50%;
+  }
+
+  .teammate-data {
+    display: flex;
+    gap: 25px;
+    flex-grow: 1;
+  }
+
+  .teammate-social-icons {
+    display: flex;
+    gap: 20px;
+  }
+
+  footer .social-icons {
+    flex-direction: column;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+}
